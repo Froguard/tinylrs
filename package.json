@@ -6,7 +6,7 @@
   "main": "./index.js",
   "scripts": {},
   "bin": {
-    "tinylrs": "./bin.js"
+    "tinylrs": "./bin/bin.js"
   },
   "maintainers": [
     {

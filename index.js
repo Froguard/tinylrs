@@ -3,7 +3,7 @@
  * @author Froguard
  * @date   2016/9/19.
  */
-var lrs = require("./lrServer");
+var lrs = require("./lib/lrServer");
 
 function run(options){
     options = options || {};

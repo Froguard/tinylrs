@@ -11,4 +11,4 @@
 // && !(base = path.basename(arg)).match(/^tinylrs$|^tinylrs.js$|^node-tinylrs$/)
 // );
 
-require("./index.js").run(null);
+require("../index.js").run(null);
