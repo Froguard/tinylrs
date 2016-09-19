@@ -10,7 +10,7 @@ function run(options){
     // {
     //   port: 35729,
     //   lrPath:"",
-    //   watchList:["../public/dist/**/*.*"],
+    //   watchList:["./dist/**/*.*"],
     //   svrOpts:{
     //   }
     // }

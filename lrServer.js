@@ -11,7 +11,8 @@ var fs = require("fs"),
     tinyLr = require("tiny-lr"),
     _livereload = require.resolve("./livereload-js/livereload"),
     gaze = require("gaze"),
-    debug   = require('debug')('tinylr:server');
+    debug   = require('debug')('tinylr:server'),
+    cwd = process.cwd();
 process.env.DEBUG = process.env.DEBUG || 'tinylr*';
 
 /**
@@ -60,7 +61,8 @@ function lrs(options){
         var targets = [];
         options.watchList.forEach(function(fPath){
             // "../public/dist/**/*.*"
-            targets.push(path.join(__dirname,""+fPath));
+            // targets.push(path.join(__dirname,""+fPath));
+            targets.push(path.resolve(cwd, fPath));
         });
         // watch
         gaze(targets,
