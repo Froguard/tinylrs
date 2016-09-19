@@ -1,0 +1,41 @@
+{
+  "name": "tinylrs",
+  "author": "Froguard",
+  "version": "0.0.1",
+  "description": "浏览器页面热刷新功能，对应所需的后端服务",
+  "main": "index.js",
+  "scripts": {
+  },
+  "bin":{
+    "tinylrs":"./bin.js"
+  },
+  "maintainers": [
+    {
+      "name": "Froguard",
+      "email": "Froguard@163.com"
+    }
+  ],
+  "dependencies": {
+    "debug": "^2.2.0",
+    "moment": "^2.13.0",
+    "node-notifier": "^4.6.0",
+    "underscore": "^1.8.3",
+    "gaze": "^1.1.1",
+    "tiny-lr": "^0.2.1"
+  },
+  "devDependencies": {
+    "cross-env": "^1.0.8",
+    "shelljs": "^0.7.0",
+    "supervisor": "^0.11.0"
+  },
+  "bugs": {
+    "url": "https://github.com/Froguard/tinylrs/issues"
+  },
+  "homepage": "https://github.com/Froguard/tinylrs",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Froguard/tinylrs.git"
+  },
+  "license": "ISC",
+  "readme": "ERROR: No README data found!"
+}
