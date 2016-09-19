@@ -5,45 +5,46 @@
 
 ### 1.init
 ````
-npm i
+$ npm install -g tinylrs
+````
+or
+````
+$ npm install --save tinylrs
 ````
 
 ### 2.useage
 
 #### step 1: inject a &lt;script&gt; tag to html (the last tail of &lt;body&gt; tag)
 ```html
-<script src="http://localhost:35729/livereload.js?snipver=1" type="text/javascript"></script>
+<script src="http://localhost:35729/livereload.js?snipver=1"></script>
 ````
 
 #### step 2: start tinylrs
 
 > Install-way1: in your npm-scripts
 
-```js
-npm i --save tinylrs
-````
 Edit package.json
 ```json
 {
-    "scripts":{
-        "tinylrs":"tinylrs ./your_watch_dir/*.js"
-    }
+  "scripts":{
+    "tinylrs": "tinylrs ./your_watch_dir/*.js"
+  }
 }
 ````
 run in bash
-```js
-npm run tinylrs
+```html
+$ npm run tinylrs
 ````
 
 
-> Install-way2: Or install it globally
-```js
-npm i -g tinylrs
-tinylrs ./your_watch_dir/*.js
+> Install-way2: bash directly (need install it globally)
+```html
+$ tinylrs ./your_watch_dir/*.js
 ````
 
 #### step 3: visit the web site by your own server
-````
+
+```html
 eg: http://localhost:8080/index
 ````
 
