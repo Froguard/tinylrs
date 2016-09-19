@@ -15,11 +15,31 @@ npm i
 ````
 
 > step 2: start tinylrs
+Install-way1: in your npm-scripts
+
 ```js
+npm i --save tinylrs
+````
+package.json
+```json
+{
+    "scripts":{
+        "tinylrs":"tinylrs ./your_watch_dir/*.js"
+    }
+}
+````
+```js
+npm run tinylrs
+````
+
+
+Install-way2: Or install it globally
+```js
+npm i -g tinylrs
 $ tinylrs ./your_watch_dir/*.js
 ````
 
-> step 3: visit the web site by you own server
+> step 3: visit the web site by your own server
 ````
 eg: localhost:8080/index
 ````
