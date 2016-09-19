@@ -1,7 +1,7 @@
 {
   "name": "tinylrs",
   "author": "Froguard",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A backend server to refresh browser page,via livereload.js & websocket,based on tiny-lr",
   "main": "./index.js",
   "scripts": {},
@@ -43,6 +43,5 @@
     "type": "git",
     "url": "git@github.com:Froguard/tinylrs.git"
   },
-  "license": "MIT",
-  "readme": "ERROR: No README data found!"
+  "license": "ISC"
 }
