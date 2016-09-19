@@ -1,6 +1,6 @@
 /**
  *
- * @author hzwangfei3
+ * @author Froguard
  * @date   2016/9/18.
  */
 'use strict';
@@ -54,10 +54,10 @@ function lrs(options){
     (function(em) {
         em = em || new (events.EventEmitter)();
         // watch event
-        var evtArr = ["changed","deleted","added"];// 跟 fs.watch中抛出的event不同[change,rename,add,delete]，且fs.watch不安全，不稳定
+        var evtArr = ["changed","deleted","added"];// different with fs.watch event[change,rename,add,delete]，and fs.watch is unstable & unsafe
         evtArr.forEach(function(evt){
             em.on(evt, function(file) {
-                tinyLr.changed(file);//这里不要写成server.changed容易混淆
+                tinyLr.changed(file);//It is not 'server.changed'
             });
         });
         // watch targets
@@ -75,7 +75,7 @@ function lrs(options){
             function(err,watcher){
                 let lrTimer = null;
                 this.on('all', function(event, filepath) {
-                    // console.log(colors.magenta(event), filepath);
+                    // console.log(colors.yellow(event), filepath);
                     !!lrTimer && clearTimeout(lrTimer);
                     lrTimer = setTimeout(function(){
                         console.log(getCurT() + colors.cyan(" File changed, refresh the browser's page!"));
@@ -87,11 +87,11 @@ function lrs(options){
 
     // print out
     console.log("\r\nLiveReload Configuration:"
-           +"\r\n        port = " + colors.magenta(options.port)
-           +"\r\n   watchList = " + colors.magenta("["+options.watchList.join(",")+"]")
-           +"\r\n      lrPath = " + colors.magenta((!options.lrPath?"default":options.lrPath)+" "+(notFound ? " Not found the file!" : ""))
-           +"\r\n       delay = " + colors.magenta(options.delay+"ms")
-           +"\r\n   env.DEBUG = " + colors.magenta(process.env.DEBUG)
+           +"\r\n        port = " + colors.yellow(options.port)
+           +"\r\n   watchList = " + colors.yellow("["+options.watchList.join(",")+"]")
+           +"\r\n      lrPath = " + colors.yellow((!options.lrPath?"default":options.lrPath)+" "+(notFound ? " Not found the file!" : ""))
+           +"\r\n       delay = " + colors.yellow(options.delay+"ms")
+           +"\r\n   env.DEBUG = " + colors.yellow(process.env.DEBUG)
     );
 
     // 3.export

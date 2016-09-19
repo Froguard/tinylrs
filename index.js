@@ -1,6 +1,6 @@
 /**
  * liveReload
- * @author hzwangfei3
+ * @author Froguard
  * @date   2016/9/19.
  */
 var lrs = require("./lrServer");
