@@ -78,7 +78,7 @@ function lrs(options){
                     // console.log(colors.magenta(event), filepath);
                     !!lrTimer && clearTimeout(lrTimer);
                     lrTimer = setTimeout(function(){
-                        console.log(colors.magenta(getCurT() + " File changed, refresh the browser's page!"));
+                        console.log(getCurT() + colors.cyan(" File changed, refresh the browser's page!"));
                         em.emit(event, filepath);
                     },options.delay);
                 });
