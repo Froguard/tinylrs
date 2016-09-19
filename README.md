@@ -1,6 +1,7 @@
 # tinylsr(tiny-liveReload-server)
 
-a livereload server that include both static-file-server(just script) and websocket
+- A simple livereload server that include both static-file-server(just script) and websocket
+- It is written based on [mklabs](https://github.com/mklabs)'s project named [tinylr](https://github.com/mklabs/tiny-lr)
 
 ### 1.init
 ````
