@@ -5,7 +5,11 @@
 
 ### 1.init
 ````
-npm i
+npm install -g tinylrs
+````
+or
+````
+npm install --save tinylrs
 ````
 
 ### 2.useage
@@ -18,10 +22,6 @@ npm i
 #### step 2: start tinylrs
 
 > Install-way1: in your npm-scripts
-
-```js
-npm i --save tinylrs
-````
 Edit package.json
 ```json
 {
@@ -36,9 +36,8 @@ npm run tinylrs
 ````
 
 
-> Install-way2: Or install it globally
+> Install-way2: bash directly (need install it globally)
 ```js
-npm i -g tinylrs
 tinylrs ./your_watch_dir/*.js
 ````
 
