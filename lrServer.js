@@ -14,7 +14,10 @@ var fs = require("fs"),
     debug   = require('debug')('tinylr:server'),
     cwd = process.cwd();
 process.env.DEBUG = process.env.DEBUG || 'tinylr*';
-
+function getCurT(){
+    var cur = new Date();
+    return "["+colors.gray([cur.getHours(),cur.getMinutes(),curT.getSeconds()].jion(":"))+"]";
+}
 /**
  * options：
  *     priority：process.argv > js-options > default-values
@@ -75,7 +78,7 @@ function lrs(options){
                     // console.log(colors.magenta(event), filepath);
                     !!lrTimer && clearTimeout(lrTimer);
                     lrTimer = setTimeout(function(){
-                        console.log(colors.magenta("\r\nFile changed, refresh the browser's page!"));
+                        console.log(colors.magenta(getCurT() + " File changed, refresh the browser's page!"));
                         em.emit(event, filepath);
                     },options.delay);
                 });
