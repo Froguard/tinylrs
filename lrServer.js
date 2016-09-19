@@ -16,7 +16,7 @@ var fs = require("fs"),
 process.env.DEBUG = process.env.DEBUG || 'tinylr*';
 function getCurT(){
     var cur = new Date();
-    return "["+colors.gray([cur.getHours(),cur.getMinutes(),cur.getSeconds()].jion(":"))+"]";
+    return "["+colors.gray([cur.getHours(),cur.getMinutes(),cur.getSeconds()].join(":"))+"]";
 }
 /**
  * options：
