@@ -3,7 +3,7 @@
  * @author hzwangfei3
  * @date   2016/9/19.
  */
-const lrs = require("./lrServer");
+var lrs = require("./lrServer");
 
 function run(options){
     options = options || {};
@@ -14,7 +14,7 @@ function run(options){
     //   svrOpts:{
     //   }
     // }
-    let app = lrs(options);
+    var app = lrs(options);
     app.start();
 }
 

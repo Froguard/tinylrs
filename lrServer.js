@@ -4,14 +4,14 @@
  * @date   2016/9/18.
  */
 'use strict';
-const fs = require("fs"),
-      path = require("path"),
-      events = require('events'),
-      colors = require("colors"),
-      tinyLr = require("tiny-lr"),
-      _livereload = require.resolve("./livereload-js/livereload"),
-      gaze = require("gaze"),
-      debug   = require('debug')('tinylr:server');
+var fs = require("fs"),
+    path = require("path"),
+    events = require('events'),
+    colors = require("colors"),
+    tinyLr = require("tiny-lr"),
+    _livereload = require.resolve("./livereload-js/livereload"),
+    gaze = require("gaze"),
+    debug   = require('debug')('tinylr:server');
 process.env.DEBUG = process.env.DEBUG || 'tinylr*';
 
 /**
@@ -83,8 +83,8 @@ function lrs(options){
     // print out
     console.log("\r\nLiveReload Configuration:"
            +"\r\n        port = " + colors.magenta(options.port)
-           +"\r\n   watchList = " + colors.magenta(`[${options.watchList.join(",")}]`)
-           +"\r\n      lrPath = " + colors.magenta(`${!options.lrPath?"default":options.lrPath}${notFound ? " Not found the file!" : ""}`)
+           +"\r\n   watchList = " + colors.magenta("["+options.watchList.join(",")+"]")
+           +"\r\n      lrPath = " + colors.magenta((!options.lrPath?"default":options.lrPath)+" "+(notFound ? " Not found the file!" : ""))
            +"\r\n       delay = " + colors.magenta(options.delay+"ms")
            +"\r\n   env.DEBUG = " + colors.magenta(process.env.DEBUG)
     );
@@ -97,15 +97,9 @@ function lrs(options){
             server.listen(port,function(err) {
                 err && console.error(colors.red(JSON.stringify(err,null,4)));
             });
-            console.log(colors.green(`\r\nStart Livereload on ${port}!\r\n`));
+            console.log(colors.green("\r\nStart Livereload on "+port+"!\r\n"));
         }
     };
-
-    // // 4.start server(include ws)
-    // server.listen(port,function(err) {
-    //     err && console.error(colors.red(JSON.stringify(err,null,4)));
-    // });
-    // console.log(colors.magenta(`Start Livereload on ${port}`));
 
 }
 
