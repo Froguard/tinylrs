@@ -3,11 +3,10 @@
   "author": "Froguard",
   "version": "0.0.1",
   "description": "浏览器页面热刷新功能，对应所需的后端服务",
-  "main": "index.js",
-  "scripts": {
-  },
-  "bin":{
-    "tinylrs":"./bin.js"
+  "main": "./index.js",
+  "scripts": {},
+  "bin": {
+    "tinylrs": "./bin.js"
   },
   "maintainers": [
     {
@@ -16,12 +15,13 @@
     }
   ],
   "dependencies": {
+    "colors": "^1.1.2",
     "debug": "^2.2.0",
+    "gaze": "^1.1.1",
     "moment": "^2.13.0",
     "node-notifier": "^4.6.0",
-    "underscore": "^1.8.3",
-    "gaze": "^1.1.1",
-    "tiny-lr": "^0.2.1"
+    "tiny-lr": "^0.2.1",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "cross-env": "^1.0.8",
