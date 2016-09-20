@@ -4,7 +4,7 @@
 - You don't need install install the livereload browser-extension,such as chrome,or other.
 - It's written based on [mklabs](https://github.com/mklabs)'s project named [tinylr](https://github.com/mklabs/tiny-lr)
 
-### 1.install
+### 1.Installation
 ````
 $ npm install -g tinylrs
 ````
@@ -13,7 +13,7 @@ or
 $ npm install --save tinylrs
 ````
 
-### 2.use
+### 2.Usage
 
 #### step 1: inject a &lt;script&gt; tag into html (the last tail of &lt;body&gt; tag)
 ```html
