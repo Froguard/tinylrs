@@ -20,13 +20,18 @@ $ npm install --save tinylrs
 <script src="http://localhost:35729/livereload.js?snipver=1"></script>
 ````
 
+
 #### step 2: start tinylrs
 ````
 $ cd %your_project_dir%
 ````
 
-> way1: in your npm-scripts
+> way1: run in bash directly (need install it globally first)
+```html
+$ tinylrs ./your_watch_dir/**/*.*
+````
 
+> way2: in your npm-scripts
 > Edit package.json
 ```json
 {
@@ -40,27 +45,20 @@ $ cd %your_project_dir%
 $ npm run tinylrs
 ````
 
-> way2: run in bash directly (need install it globally first)
-```html
-$ tinylrs ./your_watch_dir/**/*.*
-````
-
 > param support the array,just like this: (array elements are split by char ',')
 ```html
 $ tinylrs ./watch_dir_0/**/*.js,./watch_dir_1/**/*.css,./watch_dir_2/**/*.html
 ````
 
-#### step 3: visit the web site by your own server
 
+#### step 3: visit the web site by your own server
 ```html
 eg: http://localhost:8080/index
 ````
-
 Now,when your watched target-files were changed,your browser page will be refresh!
 
 
-
-#### Others:
+### Others:
 > You can also set the server port by runtime args:
 ```html
 $ tinylrs ./your_watch_dir/**/*.*  66666
