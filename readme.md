@@ -67,7 +67,6 @@ Have fun with it!
 $ tinylrs ./your_watch_dir/**/*.*  66666
 ````
 > besides,you should set the same port to she &lt;script&gt; tag
-
 ```html
 <script src="http://localhost:66666/livereload.js?snipver=1"></script>
 ````
