@@ -21,10 +21,13 @@ $ npm install --save tinylrs
 ````
 
 #### step 2: start tinylrs
+````
+cd %your_project_dir%
+````
 
-> Install-way1: in your npm-scripts
+> way1: in your npm-scripts
 
-Edit package.json
+> Edit package.json
 ```json
 {
   "scripts":{
@@ -32,19 +35,17 @@ Edit package.json
   }
 }
 ````
-run in bash
+> run in bash
 ```html
 $ npm run tinylrs
 ````
 
-
-> Install-way2: bash directly (need install it globally)
+> way2: run in bash directly (need install it globally first)
 ```html
 $ tinylrs ./your_watch_dir/**/*.*
 ````
 
-param support the array,just like this: (array elements are split by char ',')
-
+> param support the array,just like this: (array elements are split by char ',')
 ```html
 $ tinylrs ./watch_dir_0/**/*.js,./watch_dir_1/**/*.css,./watch_dir_2/**/*.html
 ````
@@ -65,7 +66,7 @@ You can also set the server port by runtime args:
 ```html
 $ tinylrs ./your_watch_dir/**/*.*  66666
 ````
-besides,you should set the same port to she script tag
+besides,you should set the same port to she &lt;script&gt; tag
 
 ```html
 <script src="http://localhost:66666/livereload.js?snipver=1"></script>
