@@ -58,7 +58,6 @@ eg: http://localhost:8080/index
 
 Now,when your watched target-files were changed,your browser page will be refresh!
 
-Have fun with it!
 
 
 #### Others:
@@ -66,14 +65,13 @@ Have fun with it!
 ```html
 $ tinylrs ./your_watch_dir/**/*.*  66666
 ````
-> besides,you should set the same port to she &lt;script&gt; tag
-
+> besides,you should set the same port to the &lt;script&gt; tag
 ```html
 <script src="http://localhost:66666/livereload.js?snipver=1"></script>
 ````
 
 
-
+Have fun with it!
 
 
 
