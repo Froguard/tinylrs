@@ -22,7 +22,7 @@ $ npm install --save tinylrs
 
 #### step 2: start tinylrs
 ````
-cd %your_project_dir%
+$ cd %your_project_dir%
 ````
 
 > way1: in your npm-scripts
@@ -62,11 +62,11 @@ Have fun with it!
 
 
 #### Others:
-You can also set the server port by runtime args:
+> You can also set the server port by runtime args:
 ```html
 $ tinylrs ./your_watch_dir/**/*.*  66666
 ````
-besides,you should set the same port to she &lt;script&gt; tag
+> besides,you should set the same port to she &lt;script&gt; tag
 
 ```html
 <script src="http://localhost:66666/livereload.js?snipver=1"></script>
