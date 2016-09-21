@@ -1,4 +1,4 @@
-# tinylsr(tiny-liveReload-server)
+# tinylrs(tiny-liveReload-server)
 
 - A simple livereload server that include both static-file-server(just script) and websocket
 - You don't need install install the livereload browser-extension,such as chrome,or other.
