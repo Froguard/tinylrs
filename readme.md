@@ -8,7 +8,10 @@
 
 - A **simple and tiny** livereload server that include both static-file-server(just script) and websocket
 - You **don't need install** the livereload **browser-extension**,such as chrome,or other.
-- It based on [tinylr](https://github.com/mklabs/tiny-lr) ,[gaze](https://github.com/shama/gaze),[minimist](https://github.com/substack/minimist)
+- It based on [tinylr](https://github.com/mklabs/tiny-lr) ,
+[gaze](https://github.com/shama/gaze),
+[minimist](https://github.com/substack/minimist),
+[debug](https://github.com/visionmedia/debug)
 
 ### 1.Installation
 ````
