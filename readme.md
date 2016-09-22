@@ -2,11 +2,13 @@
 
 ## tinylrs(tiny-livereload-server)
 
-![version](https://img.shields.io/npm/v/tinylrs.svg) ![download](https://img.shields.io/npm/dm/tinylrs.svg)
+[![version](https://img.shields.io/npm/v/tinylrs.svg "version")](https://www.npmjs.com/package/tinylrs)
+[![download](https://img.shields.io/npm/dm/tinylrs.svg "download")](https://www.npmjs.com/package/tinylrs)
+
 
 - A **simple and tiny** livereload server that include both static-file-server(just script) and websocket
 - You **don't need install** the livereload **browser-extension**,such as chrome,or other.
-- It's written based on [mklabs](https://github.com/mklabs)'s project named [tinylr](https://github.com/mklabs/tiny-lr)
+- It based on [tinylr](https://github.com/mklabs/tiny-lr) ,[gaze](https://github.com/shama/gaze),[minimist](https://github.com/substack/minimist)
 
 ### 1.Installation
 ````
