@@ -19,7 +19,7 @@ $ npm install --save tinylrs
 ```html
 <script src="http://localhost:35729/livereload.js?snipver=1"></script>
 ````
-**Only just inject the code.And you don't need download the file(livereload.js)!**
+**Just only inject the code.And you don't need download the file(livereload.js)!**
 
 
 #### step 2: start tinylrs
