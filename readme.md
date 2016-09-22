@@ -1,4 +1,8 @@
-# tinylrs(tiny-liveReload-server)
+# Intro
+
+## tinylrs(tiny-livereload-server)
+
+![version](https://img.shields.io/npm/v/tinylrs.svg) ![download](https://img.shields.io/npm/dm/tinylrs.svg)
 
 - A **simple and tiny** livereload server that include both static-file-server(just script) and websocket
 - You **don't need install** the livereload **browser-extension**,such as chrome,or other.
