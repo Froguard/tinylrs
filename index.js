@@ -4,9 +4,8 @@
  * @date   2016/9/19.
  */
 var lrs = require("./lib/lrServer");
-
-function run(options){
-    options = options || {};
+// create
+function create(options){
     // {
     //   port: 35729,
     //   lrPath:"",
@@ -14,8 +13,7 @@ function run(options){
     //   svrOpts:{
     //   }
     // }
-    var app = lrs(options);
-    app.start();
+    return lrs(options || {});
 }
-
-module.exports.run = run;
+// exports
+module.exports = create;

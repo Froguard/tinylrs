@@ -68,6 +68,45 @@ $ tinylrs ./your_watch_dir/**/*.*  66666
 <script src="http://localhost:66666/livereload.js?snipver=1"></script>
 ````
 
+### More-detail
+1.command
+````
+$ tinylrs --help
+````
+
+```text
+Usage: tinylrs [options]
+   eg: tinylrs ./**/*.*
+       tinylrs ./dist/**/*.js,./dist/**/*.css,../../views/**/*.html 35279
+       tinylrs -d ./dist/**/*.js,./dist/**/*.css  -p 35279
+       tinylrs -dirs=./dist/**/*.js,./dist/**/*.css  -port=35279
+
+Options:
+
+ -h,--help          show usage information
+ -V,--version       show current version information
+ -d,--dirs<folder>  *necessary!!* The director of watch targets files,
+                    both path-array and single-path
+ -p,--port<integer> unnecessary! The server port,both websocket-server
+                    and static-file-server,default 35279
+ -lr,--lrpath<file> unnecessary! The filepath of 'livereload.js',
+                    default a build-in-file
+````
+
+2.development
+```js
+var Tinylrs = require("tinylrs");
+var myTlrs = Tinylrs({
+    watchList: [
+        "./dist/**/*.*",
+        "../public/views/*.html"
+    ],
+    port: 66666,
+    lrPath: null
+});
+myTlrs.start();
+// you can also use the myTlrs.server,it is a tiny-lr server instance
+````
 
 Have fun with it!
 
