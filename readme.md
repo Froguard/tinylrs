@@ -1,7 +1,7 @@
 # tinylrs(tiny-liveReload-server)
 
-- A simple livereload server that include both static-file-server(just script) and websocket
-- You don't need install install the livereload browser-extension,such as chrome,or other.
+- A **simple and tiny** livereload server that include both static-file-server(just script) and websocket
+- You **don't need install** the livereload **browser-extension**,such as chrome,or other.
 - It's written based on [mklabs](https://github.com/mklabs)'s project named [tinylr](https://github.com/mklabs/tiny-lr)
 
 ### 1.Installation
@@ -15,10 +15,11 @@ $ npm install --save tinylrs
 
 ### 2.Usage
 
-#### step 1: inject a &lt;script&gt; tag into html (the last tail of &lt;body&gt; tag)
+#### step 1: inject a &lt;script&gt; tag into html (the tail of &lt;body&gt; tag)
 ```html
 <script src="http://localhost:35729/livereload.js?snipver=1"></script>
 ````
+**Only just inject the code.And you don't need download the file(livereload.js)!**
 
 
 #### step 2: start tinylrs
