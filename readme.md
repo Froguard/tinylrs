@@ -35,12 +35,13 @@ $ cd %your_project_dir%
 
 And then,you can use it in 2 different ways:
 
-> **way1**: run in bash directly (need install it globally first)
-```html
+**way1: run in bash directly (need install it globally first)**
+```bash
 $ tinylrs ./your_watch_dir/**/*.*
 ````
 
-> *way2: in your npm-scripts*
+*way2: in your npm-scripts*
+
 > *2.1: package.json*
 ```json
 {
@@ -49,12 +50,13 @@ $ tinylrs ./your_watch_dir/**/*.*
   }
 }
 ````
+
 > *2.2: run in bash*
 ```bash
 $ npm run tinylrs
 ````
 
-> *BTW: param support the array,just like this: (array ele split by char ',')*
+*BTW: param support the array,just like this: (array ele split by char ',')*
 ```bash
 $ tinylrs ./watch_dir_0/**/*.js,./watch_dir_1/**/*.css,./watch_dir_2/**/*.html
 ````
