@@ -33,13 +33,14 @@ run in bash directly (need install it globally first)
 $ cd %your_project_dir%
 $ tinylrs ./your_watch_dir/**/*.*
 ````
+Maybe you should add char '' to include the target dir if you use it in osx(mac) or other unix like.
+
 
 ### step 3: visit the web site by your own server
 ```bash
 eg: http://localhost:8080/index
 ````
 Now,browser page will be refresh when your watched-target-files were changed!
-
 
 
 
@@ -52,10 +53,10 @@ $ tinylrs --help
 
 ```text
 Usage: tinylrs [options]
-   eg: tinylrs ./**/*.*
-       tinylrs ./dist/**/*.js,./dist/**/*.css,../../views/**/*.html
-       tinylrs -d ./dist/**/*.js,./dist/**/*.css  -p 35279
-       tinylrs -dirs=./dist/**/*.js,./dist/**/*.css  -port=35279
+   eg: tinylrs './dist/**/*.*'
+       tinylrs './dist/**/*.js,./dist/**/*.css,../../views/**/*.html'
+       tinylrs -d './dist/**/*.js,./dist/**/*.css'  -p 35279
+       tinylrs --dirs='./dist/**/*.js,./dist/**/*.css'  --port=35279
 
 Options:
 
