@@ -28,12 +28,9 @@ or 'npm install --save tinylrs'
 
 
 ### step 2: start tinylrs
-````
-$ cd %your_project_dir%
-````
-
-**run in bash directly (need install it globally first)**
+run in bash directly (need install it globally first)
 ```bash
+$ cd %your_project_dir%
 $ tinylrs ./your_watch_dir/**/*.*
 ````
 
