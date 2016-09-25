@@ -72,7 +72,7 @@ Options:
 
 (1).param support the array,just like this: (array ele split by char ',')
 ```bash
-$ tinylrs ./watch_dir_0/**/*.js,./watch_dir_1/**/*.css,./watch_dir_2/**/*.html
+$ tinylrs './watch_dir_0/**/*.js,./watch_dir_1/**/*.css,./watch_dir_2/**/*.html'
 ````
 
 (2).You can also set the server port by runtime args:*
