@@ -43,10 +43,10 @@ if(args.v || args.V || args.version){
 }else{
     var dirsStr = args.d || args.dirs || (isWin ? args._[0] : args._),
         dirs;
-    if(Array.isArray(dirsStr)){
+    if(Array.isArray(dirsStr)){//osx
         dirs = dirsStr;
     }else{
-        dirs = dirsStr.split(",");
+        dirs = dirsStr.split(",");//win
     }
     var port = parseInt(args.p || args.port || (isWin ? args._[1] : 0) ) || 35729;
     var lrPath = args.lr || args.lrpath || (isWin ? args._[2] : 0) || false;

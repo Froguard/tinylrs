@@ -15,10 +15,9 @@
 ```bash
 $ npm install -g tinylrs
 ````
-or
-```bash
-$ npm install --save tinylrs
-````
+
+or 'npm install --save tinylrs'
+
 
 ### 2.Usage
 
@@ -41,8 +40,8 @@ And then,you can use it in 2 different ways:
 $ tinylrs ./your_watch_dir/**/*.*
 ````
 
-> way2: in your npm-scripts
-> 2.1: package.json
+> *way2: in your npm-scripts*
+> *2.1: package.json*
 ```json
 {
   "scripts":{
@@ -50,12 +49,12 @@ $ tinylrs ./your_watch_dir/**/*.*
   }
 }
 ````
-> 2.2: run in bash
+> *2.2: run in bash*
 ```bash
 $ npm run tinylrs
 ````
 
-> BTW: param support the array,just like this: (array ele split by char ',')
+> *BTW: param support the array,just like this: (array ele split by char ',')*
 ```bash
 $ tinylrs ./watch_dir_0/**/*.js,./watch_dir_1/**/*.css,./watch_dir_2/**/*.html
 ````
