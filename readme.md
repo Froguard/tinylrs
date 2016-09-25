@@ -11,66 +11,44 @@
 [minimist](https://github.com/substack/minimist),
 [debug](https://github.com/visionmedia/debug)
 
-### 1.Installation
+## 1.Installation
 ```bash
 $ npm install -g tinylrs
 ````
-
 or 'npm install --save tinylrs'
 
 
-### 2.Usage
+## 2.Usage
 
-#### step 1: inject a &lt;script&gt; tag into html (the tail of &lt;body&gt; tag)
+### step 1: inject a &lt;script&gt; tag into html (the tail of &lt;body&gt; tag)
 ```html
 <script src="http://localhost:35729/livereload.js?snipver=1"></script>
 ````
 **Just only inject the code.And you don't need download the file(livereload.js)!**
 
 
-#### step 2: start tinylrs
+### step 2: start tinylrs
 ````
 $ cd %your_project_dir%
 ````
 
-And then,you can use it in 2 different ways:
-
-**way1: run in bash directly (need install it globally first)**
+**run in bash directly (need install it globally first)**
 ```bash
 $ tinylrs ./your_watch_dir/**/*.*
 ````
 
-*way2: in your npm-scripts*
-
-> *2.1: package.json*
-```json
-{
-  "scripts":{
-    "tinylrs": "tinylrs ./your_watch_dir/**/*.*"
-  }
-}
-````
-
-> *2.2: run in bash*
-```bash
-$ npm run tinylrs
-````
-
-*BTW: param support the array,just like this: (array ele split by char ',')*
-```bash
-$ tinylrs ./watch_dir_0/**/*.js,./watch_dir_1/**/*.css,./watch_dir_2/**/*.html
-````
-
-
-#### step 3: visit the web site by your own server
+### step 3: visit the web site by your own server
 ```bash
 eg: http://localhost:8080/index
 ````
-Now,when your watched target-files were changed,your browser page will be refresh!
+Now,browser page will be refresh when your watched-target-files were changed!
+
+
+
 
 
 ### More-detail
-1.command
+#### 1.command
 ````
 $ tinylrs --help
 ````
@@ -84,28 +62,46 @@ Usage: tinylrs [options]
 
 Options:
 
- -h,--help          show usage information
- -V,--version       show current version information
- -d,--dirs<folder>  *necessary!!* The director of watch targets files,
-                    both path-array and single-path
- -p,--port<integer> unnecessary! The server port,both websocket-server
-                    and static-file-server,default 35279
- -lr,--lrpath<file> unnecessary! The filepath of 'livereload.js',
-                    default a build-in-file
+ -h,--help           show usage information
+ -V,--version        show current version information
+ -d,--dirs<folder>   *necessary!!* The director of watch targets files,
+                     both path-array and single-path
+ -p,--port<integer>  unnecessary! The server port,both websocket-server
+                     and static-file-server,default 35279
+ -lr,--lrpath<file>  unnecessary! The filepath of 'livereload.js',
+                     default a build-in-file
 ````
 
-Example:
-> You can also set the server port by runtime args:
+(1).param support the array,just like this: (array ele split by char ',')
 ```bash
-$ tinylrs -d ./your_watch_dir/**/*.*  -p
+$ tinylrs ./watch_dir_0/**/*.js,./watch_dir_1/**/*.css,./watch_dir_2/**/*.html
 ````
-> besides,you should set the same port to the &lt;script&gt; tag
+
+(2).You can also set the server port by runtime args:*
+```bash
+$ tinylrs -d ./your_watch_dir/**/*.*  -p 66666
+````
+*besides,you should set the same port to the &lt;script&gt; tag*
 ```html
 <script src="http://localhost:66666/livereload.js?snipver=1"></script>
 ````
 
+(3).run in your npm-scripts
+> 1: package.json
+```json
+{
+  "scripts":{
+    "tinylrs": "tinylrs ./your_watch_dir/**/*.*"
+  }
+}
+````
+> 2: run in bash
+```bash
+$ npm run tinylrs
+````
 
-2.development
+
+#### 2.development
 ```js
 var Tinylrs = require("tinylrs");
 var myTlrs = Tinylrs({
@@ -122,8 +118,7 @@ myTlrs.start();
 
 
 
-
-Have fun with it!
+#### Have fun with it!
 
 
 
