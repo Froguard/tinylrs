@@ -25,7 +25,7 @@ function help(){
         + "\n  Usage:  tinylrs [options]\n"
         + "\n     eg:  tinylrs './dist/**/*.*'"
         + "\n          tinylrs './dist/**/*.js,./dist/**/*.css,../../views/**/*.html'"
-        + "\n          tinylrs -d './dist/**/*.js,./dist/**/*.css'     -p 35279 "
+        + "\n          tinylrs -d './dist/**/*.js,./dist/**/*.css'  -p 35279 "
         + "\n          tinylrs --dirs='./dist/**/*.js,./dist/**/*.css'  --port=35279"
         + "\n"
         + "\n  Options:\n"
@@ -34,7 +34,8 @@ function help(){
         + "\n    -d, --dirs   <folder>    *necessary!!* The director of watch targets files,both path-array and single-path"
         + "\n    -p, --port   <integer>   unnecessary! The server port,both websocket-server and static-file-server,default 35279"
         + "\n    -lr,--lrpath <file>      unnecessary! The filepath of 'livereload.js',default a build-in-file"
-        + "\n    -c, --config <file>      The filepath of configuration(include all configuration-item),default './tinylrs.json',if the val is set,config-file will overwrite all options above"
+        + "\n    -c, --config <file>      The filepath of configuration(include all configuration-item),default './tinylrs.json',"
+        + "\n                             if the val is set,config-file will overwrite all options above"
         + "\n"
     );
 }
