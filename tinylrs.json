@@ -1,6 +1,8 @@
 {
-  "dirs":[
-  ],
+  "dirs": [],
   "port": 35729,
-  "lrPath": null
+  "lrPath": null,
+  "debounceDelay": 300,
+  "pollInterval": 200,
+  "svrOpts": null
 }
