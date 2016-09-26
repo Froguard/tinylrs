@@ -59,7 +59,7 @@ if(args.v || args.V || args.version){
             config = require(_configPath);
         }catch(e){
             config = false;
-            console.error(color("Can't fount the file '"+_configPath+"'","red"));
+            console.error(color("Can't found the file '"+_configPath+"'","red"));
         }
         // console.log(config);
         if(config){

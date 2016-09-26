@@ -1,7 +1,7 @@
 {
   "name": "tinylrs",
   "author": "Froguard",
-  "version": "0.0.40",
+  "version": "0.0.41",
   "description": "A backend server to refresh browser page,via livereload.js and websocket,based on tiny-lr",
   "main": "./index.js",
   "bin": {
