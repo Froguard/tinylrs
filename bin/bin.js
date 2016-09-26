@@ -6,8 +6,12 @@
  */
 var args = require('minimist')(process.argv.slice(2)),
     version = require("../package.json").version,
-    isWin = !!process.platform.match(/win32|win64/g);
-// console.dir(JSON.stringify(args,4,null));
+    isWin = !!process.platform.match(/win32|win64/g),
+    color = require("../lib/color"),
+    path = require("path");
+
+// console.log(JSON.stringify(args,4,null));
+// console.log("args._[0] = "+args._[0]);
 
 /*
 args value is different in env between osx and windows
@@ -30,6 +34,7 @@ function help(){
         + "\n    -d, --dirs   <folder>    *necessary!!* The director of watch targets files,both path-array and single-path"
         + "\n    -p, --port   <integer>   unnecessary! The server port,both websocket-server and static-file-server,default 35279"
         + "\n    -lr,--lrpath <file>      unnecessary! The filepath of 'livereload.js',default a build-in-file"
+        + "\n    -c, --config <file>      The filepath of configuration(include all configuration-item),default './tinylrs.json',if the val is set,config-file will overwrite all options above"
         + "\n"
     );
 }
@@ -37,31 +42,60 @@ function help(){
 if(args.v || args.V || args.version){
     console.log(version);
 
-}else if(args.h || args.help || (!args.d && !args.dirs && !args._.length)){
+}else if(args.h || args.help || (!args.c && !args.config && !args.d && !args.dirs && !args._.length)){
     help();
 
 }else{
-    var dirsStr = args.d || args.dirs || (isWin ? args._[0] : args._),
-        dirs = [];
-    if(Array.isArray(dirsStr)){//osx
-        dirsStr.forEach(function(ele){
-            if(ele.indexOf && ele.indexOf(",")){
-                ele.split(",").forEach(function(subEle){
-                    dirs.push(subEle);
-                });
-            }else{
-                dirs.push(ele);
-            }
-        });
-    }else{
-        dirs = dirsStr.replace(/\'|\"/g,"").split(",");//windows
+    // start-config-options
+    var options = null;
+
+    // if config file is existed
+    if(args.c || args.config){
+        var configPath = typeof(args.c)=="string" ? args.c : typeof(args.config)=="string" ? args.config : "./tinylrs.json",
+            _configPath = path.join(process.cwd(),configPath),
+            config = null;
+        // console.log(configPath+"\n",_configPath);
+        try{
+            config = require(_configPath);
+        }catch(e){
+            config = false;
+            console.error(color("Can't fount the file '"+_configPath+"'","red"));
+        }
+        // console.log(config);
+        if(config){
+            config.watchList = config.dirs || [];
+            options = config;
+        }else{
+            options = false;
+        }
     }
-    var port = parseInt(args.p || args.port || (isWin ? args._[1] : 0) ) || 35729;
-    var lrPath = args.lr || args.lrpath || (isWin ? args._[2] : 0) || false;
-    var options = {
-        watchList: dirs,
-        port: port,
-        lrPath: lrPath
-    };
+    // config-file is not existed,config by argv
+    if(!options){
+        var dirsStr = args.d || args.dirs || (isWin ? args._[0] : args._),
+            dirs = [];
+        if(Array.isArray(dirsStr)){//osx
+            dirsStr.forEach(function(ele){
+                if(ele.indexOf && ele.indexOf(",")){
+                    ele.split(",").forEach(function(subEle){
+                        dirs.push(subEle);
+                    });
+                }else{
+                    dirs.push(ele);
+                }
+            });
+        }else{//windows
+            dirsStr = dirsStr.replace(/(^\s*)(\s*$)/g, "");//trim
+            dirs = dirsStr.replace(/\'|\"/g,"").split(",");//remove '"
+        }
+        var port = parseInt(args.p || args.port || (isWin ? args._[1] : 0) ) || 35729;
+        var lrPath = args.lr || args.lrpath || (isWin ? args._[2] : 0) || false;
+        options = {
+            watchList: dirs,
+            port: port,
+            lrPath: lrPath
+        };
+    }
+    // start server
     require("../index.js")(options).start();
 }
+
