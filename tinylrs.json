@@ -3,6 +3,5 @@
   "port": 35729,
   "lrPath": null,
   "debounceDelay": 300,
-  "pollInterval": 200,
-  "svrOpts": null
+  "pollInterval": 200
 }
