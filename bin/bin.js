@@ -7,8 +7,8 @@
 var args = require('minimist')(process.argv.slice(2)),
     version = require("../package.json").version,
     isWin = !!process.platform.match(/win32|win64/g);
+// console.dir(JSON.stringify(args,4,null));
 
-console.dir(args);
 /*
 args value is different in env between osx and windows
 $ tinylrs ./*.js
