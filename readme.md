@@ -31,7 +31,7 @@ or 'npm install --save tinylrs'
 run in bash directly (need install it globally first)
 ```bash
 $ cd %your_project_dir%
-$ tinylrs ./your_watch_dir/**/*.*
+$ tinylrs './your_watch_dir/**/*.*'
 ````
 Maybe you should add char '' to include the target dir if you use it in osx(mac) or other unix like.
 
@@ -77,7 +77,7 @@ $ tinylrs './watch_dir_0/**/*.js,./watch_dir_1/**/*.css,./watch_dir_2/**/*.html'
 
 (2).You can also set the server port by runtime args:*
 ```bash
-$ tinylrs -d ./your_watch_dir/**/*.*  -p 66666
+$ tinylrs -d './your_watch_dir/**/*.*'  -p 66666
 ````
 *besides,you should set the same port to the &lt;script&gt; tag*
 ```html
@@ -89,7 +89,7 @@ $ tinylrs -d ./your_watch_dir/**/*.*  -p 66666
 ```json
 {
   "scripts":{
-    "tinylrs": "tinylrs ./your_watch_dir/**/*.*"
+    "tinylrs": "tinylrs './your_watch_dir/**/*.*'"
   }
 }
 ````
