@@ -60,14 +60,14 @@ Usage: tinylrs [options]
 
 Options:
 
- -h,--help           show usage information
- -V,--version        show current version information
- -d,--dirs<folder>   *necessary!!* The director of watch targets files,
-                     both path-array and single-path
- -p,--port<integer>  unnecessary! The server port,both websocket-server
-                     and static-file-server,default 35279
- -lr,--lrpath<file>  unnecessary! The filepath of 'livereload.js',
-                     default a build-in-file
+ -h,--help          show usage information
+ -V,--version       show current version information
+ -d,--dirs<folder>  *necessary!!* The director of watch targets files,
+                    both path-array and single-path
+ -p,--port<integer> unnecessary! The server port,both websocket-server
+                    and static-file-server,default 35279
+ -lr,--lrpath<file> unnecessary! The filepath of 'livereload.js',
+                    default a build-in-file
 ````
 
 (1).param support the array,just like this: (array ele split by char ',')
