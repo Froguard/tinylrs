@@ -10,6 +10,7 @@
 [gaze](https://github.com/shama/gaze),
 [minimist](https://github.com/substack/minimist),
 [debug](https://github.com/visionmedia/debug)
+- Cross platform Windows, OSX and Linux.
 
 ## 1.Installation
 ```bash
