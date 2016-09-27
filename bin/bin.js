@@ -20,7 +20,7 @@ win: {"_":["./*.js"]}
 osx: {"_":["./jsfile1.js","./jsfile2.js","./jsfile3.js",...]}//put all matched file into var '_'
 */
 function trimAndDelQutoChar(str){
-    return str.replace(/(^\s*)|\'|\"|(\s*$)/g,"");
+    return typeof(str)!="string" ? 0 : str.replace(/^(\s|\u00A0)+/,'').replace(/(\s|\u00A0)+$/,'').replace(/\'|\"/g,"");
 }
 function help(){
     console.log("\n  tinylrs "+version+"\n"
@@ -90,11 +90,8 @@ if(args.v || args.V || args.version){
             dirs = trimAndDelQutoChar(dirsStr).split(",");//trim & remove '"
         }
         var port = parseInt(args.p || args.port || (isWin ? args._[1] : 0) ) || 35729;
-        var lrPath = args.lr || args.lrpath || false;
-        var rootDir = args.r || args.root || false;
-        if(rootDir){
-            rootDir = trimAndDelQutoChar(rootDir);
-        }
+        var lrPath = trimAndDelQutoChar(args.lr || args.lrpath) || false;
+        var rootDir = trimAndDelQutoChar(args.r || args.root) || false;
         options = {
             watchList: dirs,
             port: port,
