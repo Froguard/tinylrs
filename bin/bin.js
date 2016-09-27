@@ -89,11 +89,13 @@ if(args.v || args.V || args.version){
             dirs = dirsStr.replace(/\'|\"/g,"").split(",");//remove '"
         }
         var port = parseInt(args.p || args.port || (isWin ? args._[1] : 0) ) || 35729;
-        var lrPath = args.lr || args.lrpath || (isWin ? args._[2] : 0) || false;
+        var lrPath = args.lr || args.lrpath || false;
+        var rootDir = args.r || args.root || false;
         options = {
             watchList: dirs,
             port: port,
-            lrPath: lrPath
+            lrPath: lrPath,
+            rootDir: rootDir
         };
     }
     // start server

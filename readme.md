@@ -4,13 +4,15 @@
 [![download](https://img.shields.io/npm/dm/tinylrs.svg "download")](https://www.npmjs.com/package/tinylrs)
 
 
-- A **simple** and **tiny** livereload server that include both static-file-server(just script) and websocket
+- Watched files changed ==&gt; reload browser pages
+- A **simple** ,**separate** and **tiny** livereload server that include both static-file-server(just script) and websocket
 - You **don't need install the livereload browser-extension**,such as chrome,or other.
 - It based on [tinylr](https://github.com/mklabs/tiny-lr) ,
 [gaze](https://github.com/shama/gaze),
 [minimist](https://github.com/substack/minimist),
 [debug](https://github.com/visionmedia/debug)
 - Cross platform Windows, OSX and Linux.
+
 
 ## 1.Installation
 ```bash
