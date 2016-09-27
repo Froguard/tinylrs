@@ -41,7 +41,7 @@ function help(){
         + "\n    -V, --version            show current version information"
         + "\n    -d, --dirs   <folder>    *necessary!!* The director of watch targets files,both path-array and single-path"
         + "\n    -p, --port   <integer>   unnecessary! The server port,both websocket-server and static-file-server,default 35279"
-        + "\n    -lr,--lrpath <file>      unnecessary! The filepath of 'livereload.js',default a build-in-file"
+        + "\n    -l, --lrpath <file>      unnecessary! The filepath of 'livereload.js',default a build-in-file"
         + "\n    -c, --config <file>      The filepath of configuration(include all configuration-item),default './tinylrs.json',"
         + "\n                             if the val is set,config-file will overwrite all options above"
         + "\n"
@@ -71,7 +71,7 @@ if(args.v || args.V || args.version){
             config = require(_configPath);
         }catch(e){
             config = false;
-            errorOut("Can't found the file '"+_configPath+"'");
+            errorOut("The file '"+_configPath+"' wasn't found");
         }
         // console.log(config);
         if(config){
@@ -113,7 +113,7 @@ if(args.v || args.V || args.version){
             }
         }
         var port = parseInt(args.p || args.port || (isWin ? args._[1] : 0) ) || 35729;
-        var lrPath = trimAndDelQutoChar(args.lr || args.lrpath) || false;
+        var lrPath = trimAndDelQutoChar(args.l || args.lrpath) || false;
         var rootDir = trimAndDelQutoChar(args.r || args.root) || false;
         options = {
             watchList: dirs,
