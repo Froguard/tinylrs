@@ -22,6 +22,12 @@ osx: {"_":["./jsfile1.js","./jsfile2.js","./jsfile3.js",...]}//put all matched f
 function trimAndDelQutoChar(str){
     return typeof(str)!="string" ? 0 : str.replace(/^(\s|\u00A0)+/,'').replace(/(\s|\u00A0)+$/,'').replace(/\'|\"/g,"");
 }
+function warningOut(str){
+    console.warn(color("[warning]","red","yellow","bold") + color(" "+str,"yellow"));
+}
+function errorOut(str){
+    console.error(color("[error]","brightRed","brightYellow","bold") + color(" "+str,"brightRed"));
+}
 function help(){
     console.log("\n  tinylrs "+version+"\n"
         + "\n  Usage:  tinylrs [options]\n"
@@ -54,19 +60,27 @@ if(args.v || args.V || args.version){
 
     // if config file is existed
     if(args.c || args.config){
+        if(typeof(args.c)!="string" && typeof(args.config)!="string"){
+            warningOut("U'd better type in a completed command like 'tinylrs -c ./your_diy_config.json' or the file './tinylrs.json' will be resolved");
+        }
         var configPath = typeof(args.c)=="string" ? args.c : typeof(args.config)=="string" ? args.config : "./tinylrs.json",
-            _configPath = path.join(process.cwd(),configPath),
+            _configPath = path.join(process.cwd(),trimAndDelQutoChar(configPath)),
             config = null;
         // console.log(configPath+"\n",_configPath);
         try{
             config = require(_configPath);
         }catch(e){
             config = false;
-            console.error(color("Can't found the file '"+_configPath+"'","red"));
+            errorOut("Can't found the file '"+_configPath+"'");
         }
         // console.log(config);
         if(config){
-            config.watchList = config.dirs || [];
+            if(Array.isArray(config.dirs)){
+                config.watchList = config.dirs;
+            }else{
+                warningOut("The param \"dir\" in file "+configPath+" is not an array,check it plz!");
+                config.watchList = [];
+            }
             options = config;
         }else{
             options = false;
@@ -87,7 +101,16 @@ if(args.v || args.V || args.version){
                 }
             });
         }else{//windows
-            dirs = trimAndDelQutoChar(dirsStr).split(",");//trim & remove '"
+            if(typeof(dirsStr)=="string"){
+                dirs = trimAndDelQutoChar(dirsStr).split(",");
+            }else{
+                if(typeof(dirsStr)=="boolean"){
+                    warningOut("U'd better type in a completed command,like: tinylrs -d './dist/*.js'");
+                }else{
+                    warningOut("The param dir should be a string,check it plz!");
+                }
+                dirs = [];
+            }
         }
         var port = parseInt(args.p || args.port || (isWin ? args._[1] : 0) ) || 35729;
         var lrPath = trimAndDelQutoChar(args.lr || args.lrpath) || false;
