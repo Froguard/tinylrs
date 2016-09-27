@@ -19,7 +19,9 @@ $ tinylrs ./*.js
 win: {"_":["./*.js"]}
 osx: {"_":["./jsfile1.js","./jsfile2.js","./jsfile3.js",...]}//put all matched file into var '_'
 */
-
+function trimAndDelQutoChar(str){
+    return str.replace(/(^\s*)|\'|\"|(\s*$)/g,"");
+}
 function help(){
     console.log("\n  tinylrs "+version+"\n"
         + "\n  Usage:  tinylrs [options]\n"
@@ -78,19 +80,21 @@ if(args.v || args.V || args.version){
             dirsStr.forEach(function(ele){
                 if(ele.indexOf && ele.indexOf(",")){
                     ele.split(",").forEach(function(subEle){
-                        dirs.push(subEle);
+                        dirs.push(trimAndDelQutoChar(subEle));
                     });
                 }else{
-                    dirs.push(ele);
+                    dirs.push(trimAndDelQutoChar(ele));
                 }
             });
         }else{//windows
-            dirsStr = dirsStr.replace(/(^\s*)(\s*$)/g, "");//trim
-            dirs = dirsStr.replace(/\'|\"/g,"").split(",");//remove '"
+            dirs = trimAndDelQutoChar(dirsStr).split(",");//trim & remove '"
         }
         var port = parseInt(args.p || args.port || (isWin ? args._[1] : 0) ) || 35729;
         var lrPath = args.lr || args.lrpath || false;
         var rootDir = args.r || args.root || false;
+        if(rootDir){
+            rootDir = trimAndDelQutoChar(rootDir);
+        }
         options = {
             watchList: dirs,
             port: port,
