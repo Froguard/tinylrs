@@ -1,7 +1,7 @@
 {
   "name": "tinylrs",
   "author": "Froguard",
-  "version": "0.0.54",
+  "version": "0.0.56",
   "description": "A tiny server that watch files changed and refresh browser page,via livereload.js and websocket,based on tiny-lr",
   "main": "./index.js",
   "bin": {

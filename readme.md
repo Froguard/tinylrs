@@ -69,7 +69,7 @@ Options:
                     both path-array and single-path
  -p,--port<integer> unnecessary! The server port,both websocket-server
                     and static-file-server,default 35279
- -lr,--lrpath<file> unnecessary! The filepath of 'livereload.js',
+ -l,--lrfile<file>  unnecessary! The filepath of 'livereload.js',
                     default a build-in-file
 ````
 
@@ -111,7 +111,7 @@ var myTlrs = Tinylrs({
         "../public/views/*.html"
     ],
     port: 66666,
-    lrPath: null
+    lrfile: null
 });
 myTlrs.start();
 // you can also use the myTlrs.server,it is a tiny-lr server instance
