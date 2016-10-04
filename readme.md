@@ -1,8 +1,10 @@
 ## tinylrs(tiny-livereload-server)
 
-[![version](https://img.shields.io/npm/v/tinylrs.svg "version")](https://www.npmjs.com/package/tinylrs)
-[![download](https://img.shields.io/npm/dm/tinylrs.svg "download")](https://www.npmjs.com/package/tinylrs)
+[![version](https://img.shields.io/npm/v/tinylrs.svg "version")](https://www.npmjs.com/package/tinylrs) 
+[![download](https://img.shields.io/npm/dm/tinylrs.svg "download")](https://www.npmjs.com/package/tinylrs) 
+[![Build Status](https://travis-ci.org/Froguard/tinylrs.svg?branch=master)](https://travis-ci.org/Froguard/tinylrs) 
 
+[![nodei](https://nodei.co/npm/tinylrs.png?downloads=true)](https://nodei.co/npm/tinylrs.png?downloads=true)
 
 - Watched files changed ==&gt; reload browser pages
 - A **simple** ,**separate** and **tiny** livereload server that include both static-file-server(just script) and websocket
