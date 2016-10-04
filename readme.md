@@ -7,11 +7,11 @@
 - Watched files changed ==&gt; reload browser pages
 - A **simple** ,**separate** and **tiny** livereload server that include both static-file-server(just script) and websocket
 - You **don't need install the livereload browser-extension**,such as chrome,or other.
-- It based on [tinylr](https://github.com/mklabs/tiny-lr) ,
+- Only 3 Dependencies: 
+[tinylr](https://github.com/mklabs/tiny-lr) ,
 [gaze](https://github.com/shama/gaze),
-[minimist](https://github.com/substack/minimist),
-[debug](https://github.com/visionmedia/debug)
-- Cross platform Windows, OSX and Linux.
+[minimist](https://github.com/substack/minimist)
+- Cross platform Windows, *nix(Mac-OSX or Linux).
 
 
 ## 1.Installation
@@ -43,13 +43,13 @@ Maybe you should add char '' to include the target dir if you use it in osx(mac)
 ```bash
 eg: http://localhost:8080/index
 ````
-Now,browser page will be refresh when your watched-target-files were changed!
+Now,browser page will be refreshed when your watched-target-files were changed!
 
 
 
 
 ### More-detail
-#### 1.command
+#### 1.command line
 ````
 $ tinylrs --help
 ````
@@ -63,14 +63,14 @@ Usage: tinylrs [options]
 
 Options:
 
- -h,--help          show usage information
- -V,--version       show current version information
- -d,--dirs<folder>  *necessary!!* The director of watch targets files,
-                    both path-array and single-path
- -p,--port<integer> unnecessary! The server port,both websocket-server
-                    and static-file-server,default 35279
- -l,--lrfile<file>  unnecessary! The filepath of 'livereload.js',
-                    default a build-in-file
+ -h,--help           show usage information
+ -V,--version        show current version information
+ -d,--dirs<folder>   *necessary!!* The director of watch targets files,
+                     both path-array and single-path
+ -p,--port<integer>  unnecessary! The server port,both websocket-server
+                     and static-file-server,default 35279
+ -l,--lrfile<file>   unnecessary! The filepath of 'livereload.js',
+                     default a build-in-file
 ````
 
 (1).param support the array,just like this: (array ele split by char ',')
@@ -92,7 +92,7 @@ $ tinylrs -d './your_watch_dir/**/*.*'  -p 66666
 ```json
 {
   "scripts":{
-    "tinylrs": "tinylrs './your_watch_dir/**/*.*'"
+    "tinylrs": "tinylrs -d './your_watch_dir/**/*.*' -p 66666"
   }
 }
 ````
@@ -118,6 +118,17 @@ myTlrs.start();
 ````
 
 
+### Questions
+
+> 1.Install failed: You maybe include 'sudo' in front of command line,if use it on *unix os like linux or mac-osx
+```bash
+sudo npm i -g tinylrs
+````
+
+> 2.No matches found: xxxx/path/xxxx
+```html
+check the directors you have type in,if use it on *unix os like linux or mac-osx
+````
 
 #### Have fun with it!
 

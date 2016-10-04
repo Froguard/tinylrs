@@ -14,16 +14,21 @@
     }
   ],
   "scripts": {
-    "test":""
+    "test": "mocha"
   },
   "keywords": [
-    "livereload",
-    "refresh",
+    "cmd R",
+    "f5",
+    "browser page",
+    "autoreload",
+    "server",
     "websocket",
     "no browser extension",
     "watch files",
     "separate tiny",
-    "command line"
+    "command line",
+    "refresh",
+    "livereload"
   ],
   "dependencies": {
     "gaze": "^1.1.1",
@@ -31,6 +36,8 @@
     "tiny-lr": "^0.2.1"
   },
   "devDependencies": {
+    "mocha": "^3.1.0",
+    "should": "^11.1.0"
   },
   "files": [
     "index.js",
