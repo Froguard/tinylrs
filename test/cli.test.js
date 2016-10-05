@@ -1,5 +1,6 @@
 /*
  * test command line
+ * coming soon...
  */
 var assert = require("assert");
 describe("test command line", function() {
@@ -20,7 +21,7 @@ describe("test command line", function() {
         // 在本区块的每个测试用例之后执行
     });
 
-    it("test", function(done) {
+    it("test0", function(done) {
         var n = 1;
         assert.ok(n);
         done && done.call(this);

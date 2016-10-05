@@ -1,9 +1,9 @@
 /*
- * test config.json
+ * test main
  * coming soon...
  */
 var assert = require("assert");
-describe("test config by file 'config.json'", function() {
+describe("test main", function() {
 
     it("test0", function(done) {
         var n = 1;
