@@ -1,6 +1,7 @@
 ## tinylrs(tiny-livereload-server)
 
 [![version](https://img.shields.io/npm/v/tinylrs.svg "version")](https://www.npmjs.com/package/tinylrs) 
+<!--[![npm version](https://badge.fury.io/js/tinylrs.svg)](https://badge.fury.io/js/tinylrs)-->
 [![download](https://img.shields.io/npm/dm/tinylrs.svg "download")](https://www.npmjs.com/package/tinylrs) 
 [![Build Status](https://travis-ci.org/Froguard/tinylrs.svg?branch=master)](https://travis-ci.org/Froguard/tinylrs) 
 
