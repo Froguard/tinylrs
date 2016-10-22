@@ -2,10 +2,12 @@
 
 <!--[![npm version](https://badge.fury.io/js/tinylrs.svg)](https://badge.fury.io/js/tinylrs)-->
 [![version](https://img.shields.io/npm/v/tinylrs.svg "version")](https://www.npmjs.com/package/tinylrs) 
-[![download](https://img.shields.io/npm/dm/tinylrs.svg "download")](https://www.npmjs.com/package/tinylrs) 
-[![Build Status](https://travis-ci.org/Froguard/tinylrs.svg?branch=master)](https://travis-ci.org/Froguard/tinylrs) 
-
-[![nodei](https://nodei.co/npm/tinylrs.png?downloads=true)](https://nodei.co/npm/tinylrs.png?downloads=true)
+[![download](https://img.shields.io/npm/dt/tinylrs.svg "download")](https://www.npmjs.com/package/tinylrs)
+[![Build Status](https://img.shields.io/travis/Froguard/tinylrs.svg)](https://travis-ci.org/Froguard/tinylrs)
+[![GitHub issues](https://img.shields.io/github/issues/Froguard/tinylrs.svg)](https://github.com/Froguard/tinylrs/issues?q=is%3Aopen+is%3Aissue)
+<!--[![label](https://img.shields.io/github/issues-raw/Froguard/tinylrs.svg?style=flat-square)](https://github.com/Froguard/tinylrs/issues)-->
+<!--[![download](https://img.shields.io/npm/dm/tinylrs.svg "download")](https://www.npmjs.com/package/tinylrs) -->
+<!--[![nodei](https://nodei.co/npm/tinylrs.png?downloads=true)](https://nodei.co/npm/tinylrs.png?downloads=true)-->
 
 - Watched files changed ==&gt; reload browser pages
 - A **simple** ,**separate** and **tiny** livereload server that include both static-file-server(just script) and websocket
@@ -21,7 +23,7 @@
 ```bash
 $ npm install -g tinylrs
 ````
-or 'npm install --save tinylrs'
+or ````npm install --save-dev tinylrs````
 
 
 ## 2.Usage
@@ -53,11 +55,11 @@ Now,browser page will be refreshed when your watched-target-files were changed!
 
 ### More-detail
 #### 1.command line
-````
+```bash
 $ tinylrs --help
 ````
 
-```text
+```bash
 Usage: tinylrs [options]
    eg: tinylrs './dist/**/*.*'
        tinylrs './dist/**/*.js,./dist/**/*.css,../../views/**/*.html'
