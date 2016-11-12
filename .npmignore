@@ -1,8 +1,8 @@
 .idea/
 log*/
-npm-debug.log*
 node_modules/
-*/*/node_modules/
 tmp/
+test/
+npm-debug.log*
 Thumbs.db
 .DS_store

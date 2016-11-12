@@ -10,14 +10,14 @@
 [![nodei](https://nodei.co/npm/tinylrs.png?downloads=true)](https://www.npmjs.com/package/tinylrs)
 
 - Watched files changed ==&gt; reload browser pages
-- A **simple** ,**separate** and **tiny** livereload server that include both static-file-server(just script) and websocket
+- A **separate** livereload server that include both static-file-server(just script) and websocket
 - You **don't need install the livereload browser-extension**,such as chrome,or other.
-- Only 3 Dependencies: 
+- Just only npm, **don't need grunt or gulp or others**, **don't need download file livereload.js** any more
+- **Simple** and **tiny**: Only 3 Dependencies:
 [tinylr](https://github.com/mklabs/tiny-lr) ,
 [gaze](https://github.com/shama/gaze),
 [minimist](https://github.com/substack/minimist)
-- Cross platform Windows, *nix(Mac-OSX or Linux).
-
+- **Cross platform** Windows, *nix(Mac-OSX or Linux).
 
 ## 1.Installation
 ```bash
@@ -131,9 +131,9 @@ sudo npm i -g tinylrs
 ````
 
 > 2.No matches found: xxxx/path/xxxx
-```html
+
 check the directors you have type in,if use it on *unix os like linux or mac-osx
-````
+
 
 #### Have fun with it!
 
