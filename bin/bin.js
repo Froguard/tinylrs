@@ -92,7 +92,7 @@ if(args.v || args.V || args.version){
             dirs = [];
         if(Array.isArray(dirsStr)){//osx
             dirsStr.forEach(function(ele){
-                if(ele.indexOf && ele.indexOf(",")){
+                if(ele.indexOf && ~ele.indexOf(",")){
                     ele.split(",").forEach(function(subEle){
                         dirs.push(trimAndDelQutoChar(subEle));
                     });
