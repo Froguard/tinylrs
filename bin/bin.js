@@ -116,7 +116,7 @@ if(args.v || args.V || args.version){
         var port = parseInt(args.p || args.port || (isWin ? args._[1] : 0) ) || 35729;
         var lrfile = trimAndDelQutoChar(args.l || args.lrfile) || false;
         var rootDir = trimAndDelQutoChar(args.r || args.root) || false;
-        var mode = args.m || args.mode || false;
+        var mode = trimAndDelQutoChar(args.m || args.mode) || false;
         options = {
             watchList: dirs,
             port: port,
