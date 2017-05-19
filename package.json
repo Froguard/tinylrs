@@ -1,7 +1,9 @@
 {
   "name": "tinylrs",
-  "author": "Froguard",
-  "version": "1.0.4",
+  "author": {
+    "name": "Froguard"
+  },
+  "version": "1.0.6",
   "description": "A tiny server that watch files changed and refresh browser page,via livereload.js and websocket,based on tiny-lr",
   "main": "./index.js",
   "bin": {
@@ -31,9 +33,9 @@
     "livereload"
   ],
   "dependencies": {
-    "gaze": "^1.1.1",
-    "minimist": "^1.2.0",
-    "tiny-lr": "^0.2.1"
+    "gaze": "1.1.2",
+    "minimist": "1.2.0",
+    "tiny-lr": "1.0.4"
   },
   "devDependencies": {
     "mocha": "^3.1.0",
@@ -53,7 +55,7 @@
   "homepage": "https://github.com/Froguard/tinylrs",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Froguard/tinylrs.git"
+    "url": "git+ssh://git@github.com/Froguard/tinylrs.git"
   },
   "license": "ISC"
 }
