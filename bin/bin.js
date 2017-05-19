@@ -42,7 +42,6 @@ function help(){
         + "\n    -d, --dirs   <folder>    *necessary!!* The director of watch targets files,both path-array and single-path"
         + "\n    -p, --port   <integer>   unnecessary! The server port,both websocket-server and static-file-server,default 35279"
         + "\n    -l, --lrfile <file>      unnecessary! The filepath of 'livereload.js',default a build-in-file"
-        + "\n    -m, --mode <string>      unnecessary! fs.watch mode['auto','watch'], default is 'poll'"
         + "\n    -c, --config <file>      The filepath of configuration(include all configuration-item),default './tinylrs.json',"
         + "\n                             if the val is set,config-file will overwrite all options above"
         + "\n"

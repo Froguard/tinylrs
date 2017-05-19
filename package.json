@@ -3,7 +3,7 @@
   "author": {
     "name": "Froguard"
   },
-  "version": "1.0.9",
+  "version": "1.0.12",
   "description": "A tiny server that watch files changed and refresh browser page,via livereload.js and websocket,based on tiny-lr",
   "main": "./index.js",
   "bin": {
@@ -33,11 +33,12 @@
     "livereload"
   ],
   "dependencies": {
-    "gaze": "1.1.2",
+    "chokidar": "^1.7.0",
     "minimist": "1.2.0",
     "tiny-lr": "1.0.4"
   },
   "devDependencies": {
+    "chokidar": "^1.7.0",
     "mocha": "^3.1.0",
     "should": "^11.1.0"
   },
