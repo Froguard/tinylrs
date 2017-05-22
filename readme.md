@@ -5,6 +5,7 @@
 [![Build Status](https://img.shields.io/travis/Froguard/tinylrs.svg)](https://travis-ci.org/Froguard/tinylrs)
 [![download](https://img.shields.io/npm/dt/tinylrs.svg "download")](https://www.npmjs.com/package/tinylrs)
 [![GitHub issues](https://img.shields.io/github/issues/Froguard/tinylrs.svg)](https://github.com/Froguard/tinylrs/issues?q=is%3Aopen+is%3Aissue)
+[![Github licences](https://img.shields.io/github/license/Froguard/tinylrs.svg)](https://github.com/Froguard/tinylrs/blob/master/LICENSE)
 <!--[![label](https://img.shields.io/github/issues-raw/Froguard/tinylrs.svg?style=flat-square)](https://github.com/Froguard/tinylrs/issues)-->
 <!--[![download](https://img.shields.io/npm/dm/tinylrs.svg "download")](https://www.npmjs.com/package/tinylrs) -->
 [![nodei](https://nodei.co/npm/tinylrs.png?downloads=true)](https://www.npmjs.com/package/tinylrs)
