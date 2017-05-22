@@ -58,5 +58,5 @@
     "type": "git",
     "url": "git+ssh://git@github.com/Froguard/tinylrs.git"
   },
-  "license": "ISC"
+  "license": "MIT"
 }
